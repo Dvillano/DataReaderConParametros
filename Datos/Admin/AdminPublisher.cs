@@ -114,13 +114,13 @@ namespace Datos.Admin
 
         public static List<Publisher> Listar(string ciudad, string estado, string pais)
         {
-            string querySQL = "SELECT pub_id,pub_name,city,state,country FROM dbo.publishers WHERE city = @city AND state is NULL OR state = @state AND country is NULL OR country = @country";
+            string querySQL = "SELECT pub_id,pub_name,city,state,country FROM dbo.publishers WHERE city = @city AND state is NULL OR state = @state AND country = @country";
 
             SqlCommand comando = new SqlCommand(querySQL, AdminDB.ConectarBase());
 
             comando.Parameters.Add("@city", SqlDbType.VarChar, 20).Value = ciudad;
             comando.Parameters.Add("@state", SqlDbType.Char, 2).Value = estado;
-            comando.Parameters.Add("@country", SqlDbType.VarChar, 30).Value = estado;
+            comando.Parameters.Add("@country", SqlDbType.VarChar, 30).Value = pais;
 
             SqlDataReader reader;
             reader = comando.ExecuteReader();
