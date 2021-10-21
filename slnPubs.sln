@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31729.503
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Datos", "Datos\Datos.csproj", "{2F2FB31E-662C-44C3-9909-D92E82BF861E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsPubs", "WindowsPubs\WindowsPubs.csproj", "{B30E31B6-A971-4C92-98B0-626AF1971826}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2F2FB31E-662C-44C3-9909-D92E82BF861E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F2FB31E-662C-44C3-9909-D92E82BF861E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F2FB31E-662C-44C3-9909-D92E82BF861E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F2FB31E-662C-44C3-9909-D92E82BF861E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B30E31B6-A971-4C92-98B0-626AF1971826}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B30E31B6-A971-4C92-98B0-626AF1971826}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B30E31B6-A971-4C92-98B0-626AF1971826}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B30E31B6-A971-4C92-98B0-626AF1971826}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B951A586-A320-4E3E-9D2B-A3199E26822F}
+	EndGlobalSection
+EndGlobal
