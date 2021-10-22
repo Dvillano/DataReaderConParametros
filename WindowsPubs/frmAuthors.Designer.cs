@@ -37,6 +37,8 @@ namespace WindowsPubs
             this.btnTraerAutorCiudadEstado = new System.Windows.Forms.Button();
             this.txtEstado = new System.Windows.Forms.TextBox();
             this.lblEstado = new System.Windows.Forms.Label();
+            this.cbCiudad = new System.Windows.Forms.ComboBox();
+            this.btnTraerSoloCiudad = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.gridAuthors)).BeginInit();
             this.SuspendLayout();
             // 
@@ -113,11 +115,32 @@ namespace WindowsPubs
             this.lblEstado.TabIndex = 5;
             this.lblEstado.Text = "Estado: ";
             // 
+            // cbCiudad
+            // 
+            this.cbCiudad.FormattingEnabled = true;
+            this.cbCiudad.Location = new System.Drawing.Point(316, 77);
+            this.cbCiudad.Name = "cbCiudad";
+            this.cbCiudad.Size = new System.Drawing.Size(121, 21);
+            this.cbCiudad.TabIndex = 8;
+            this.cbCiudad.SelectionChangeCommitted += new System.EventHandler(this.cbCiudad_SelectionChangeCommitted);
+            // 
+            // btnTraerSoloCiudad
+            // 
+            this.btnTraerSoloCiudad.Location = new System.Drawing.Point(443, 75);
+            this.btnTraerSoloCiudad.Name = "btnTraerSoloCiudad";
+            this.btnTraerSoloCiudad.Size = new System.Drawing.Size(148, 23);
+            this.btnTraerSoloCiudad.TabIndex = 9;
+            this.btnTraerSoloCiudad.Text = "Traer solo ciudades";
+            this.btnTraerSoloCiudad.UseVisualStyleBackColor = true;
+            this.btnTraerSoloCiudad.Click += new System.EventHandler(this.btnTraerSoloCiudad_Click);
+            // 
             // frmAuthors
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnTraerSoloCiudad);
+            this.Controls.Add(this.cbCiudad);
             this.Controls.Add(this.btnTraerAutorCiudadEstado);
             this.Controls.Add(this.txtEstado);
             this.Controls.Add(this.lblEstado);
@@ -145,6 +168,8 @@ namespace WindowsPubs
         private System.Windows.Forms.Button btnTraerAutorCiudadEstado;
         private System.Windows.Forms.TextBox txtEstado;
         private System.Windows.Forms.Label lblEstado;
+        private System.Windows.Forms.ComboBox cbCiudad;
+        private System.Windows.Forms.Button btnTraerSoloCiudad;
     }
 }
 

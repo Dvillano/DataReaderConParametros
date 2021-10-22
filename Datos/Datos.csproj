@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Admin\AdminAuthor.cs" />
+    <Compile Include="Admin\AdminCity.cs" />
     <Compile Include="Admin\AdminPublisher.cs" />
     <Compile Include="Models\Author.cs" />
     <Compile Include="Models\Publisher.cs" />

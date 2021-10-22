@@ -123,5 +123,44 @@ namespace Datos.Admin
 
             return authors;
         }
+
+        public static DataTable ListarDataTable()
+        {
+            // Query 
+            string querySQL = "SELECT au_id,au_lname,au_fname,phone,address,city,state,zip,contract FROM dbo.authors";
+
+            //declarar y crear un SQLDataAdapter
+            SqlDataAdapter adapter = new SqlDataAdapter(querySQL, AdminDB.ConectarBase());
+
+            //Declarar y crear un DataSet
+            DataSet ds = new DataSet();
+
+            //invocar al método Fill-->conecta a la DB, Ejecuta el Select, Crear DataTable y se desconecta
+            adapter.Fill(ds, "City");
+
+            return ds.Tables["City"];
+        }
+
+        public static DataTable ListarDataTable(string ciudad)
+        {
+
+            string querySQL = "SELECT au_id,au_lname,au_fname,phone,address,city,state,zip,contract FROM dbo.authors WHERE city = @city";
+
+ 
+            SqlDataAdapter adapter = new SqlDataAdapter(querySQL, AdminDB.ConectarBase());
+
+            //Declarar parámetros
+            adapter.SelectCommand.Parameters.Add("@city", SqlDbType.VarChar, 20).Value = ciudad;
+
+
+            DataSet ds = new DataSet();
+
+            adapter.Fill(ds, "City");
+
+            return ds.Tables["City"];
+        }
+
+       
+
     }
 }
